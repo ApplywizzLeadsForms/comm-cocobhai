@@ -36,7 +36,7 @@ const countries = [
   "Zambia", "Zimbabwe"
 ];
 
-export default function InstagramReferralForm({ reelSource = "Free certifications" }: { reelSource: string }) {
+export default function InstagramReferralForm({ reelSource = "comm-suhani" }: { reelSource: string }) {
   const { toast } = useToast();
 
   const [formData, setFormData] = useState({
@@ -103,16 +103,14 @@ export default function InstagramReferralForm({ reelSource = "Free certification
         headers: { "Content-Type": "application/json", "authorization": `Bearer ${supabaseKey}` },
         body: JSON.stringify({
           to: email, // Send email to the client's email address
-          subject: "Your Free Certification List, From ApplyWizz",
+          subject: "ApplyWizz community",
           htmlBody: `
            Hi ${firstName} ${lastName}!
 
            Thanks for commenting on our Instagram post!
-           As promised, here’s your list of top free certifications from leading companies, covering Python, AI, Cloud, Data, and more.
-               
-          🔗 https://free-certified-courses-b-mt6crpl.gamma.site/
-
-           Start learning today and take one step closer to your next big opportunity. 🚀
+           As promised, here’s is your Applywizz community link
+           https://www.applywizz.ai/community
+           
            Best,
            Team ApplyWizz`
         })
