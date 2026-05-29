@@ -36,7 +36,7 @@ const countries = [
   "Zambia", "Zimbabwe"
 ];
 
-export default function InstagramReferralForm({ reelSource = "comm-suhani" }: { reelSource: string }) {
+export default function InstagramReferralForm({ reelSource = "comm-bhai" }: { reelSource: string }) {
   const { toast } = useToast();
 
   const [formData, setFormData] = useState({
